@@ -1,0 +1,130 @@
+
+body{
+    background-color: dimgrey;
+    margin: 0;
+}
+.container{
+    display: grid;
+    /*padding: 25px;*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    background-color: dimgrey;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer"
+}
+.header{
+    grid-area: header;
+    display: grid;
+    padding-left: 50px;
+    padding-right: 60px;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    background-color: black;
+    justify-self: stretch;
+    align-items: center;
+}
+.body{
+    grid-area: body;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+@media (max-width : 700px){
+    .body{
+      padding: 0 1rem 0 1rem;
+        grid-area: body;
+        justify-items: center;
+        display: grid;
+        row-gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "plan1"
+        "plan2"
+        "plan3"
+    }
+    .plan_item3{
+        grid-area: plan3;
+        height: 100% !important;
+        width: 95%!important;
+        padding: 5px;
+    }
+    .plan_item2{
+        grid-area: plan2;
+        height: 100% !important;
+        width: 95%!important;
+        padding: 5px;
+    }
+    .plan_item1{
+        grid-area: plan1;
+        height: 100% !important;
+        width: 95%!important;
+        padding: 5px;
+    }
+
+    .header{
+        padding: 15px; ;
+    }
+
+}
+.footer{
+    grid-area: footer;
+    background-color: darkgray;
+}
+.plan_item1{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    width: 25%;
+    height: 90%;
+    border-radius: 25px;
+    padding: 5px;
+}
+.plan_item2{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    width: 25%;
+    height: 70%;
+    border-radius: 25px;
+    padding: 5px;
+}
+.plan_item3{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    width: 25%;
+    height: 70%;
+    border-radius: 25px;
+    padding: 5px;
+    order: -1;
+}
+nav{
+    color: aliceblue;
+}
+.header img{
+    color: aliceblue;
+}
+.circle {
+    background: darkgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.body span{
+    background-color:darkgray ;
+    border-radius: 25%;
+}
+
